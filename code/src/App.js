@@ -1,74 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react'
 
-import Form from './components/Form';
-import Welcome from 'components/Welcome';
+import Header from './components/Header'
+import Select from './components/Select'
+import RadioOptions from './components/RadioOptions'
+import Name from './components/Name'
+import SubmitButton from './components/SubmitButton'
+import Summary from './components/Summary'
 
 
 export const App = () => {
-	return(
-    <>
-    <Form/>
-    <Welcome/>
-    </>
-  )
-};
+
+  const [name, setName] = useState('')
+  const [quote, setQuote] = useState ('')
+  const [doYouLikeLoganRoy, setDoYouLikeLoganRoy] = useState ('')
+  const [submit, setSubmit] = useState (false)
+}
 
 
+/* 'wrapper covers the hole page*/
+return (
+  <div className='wrapper'>
+  {submit ? 
+  (
+  <div className='summary'>
+<Summary
+  name={name}
+  quote={quote}
+  doYouLikeLoganRoy={doYouLikeLoganRoy}/>
+</div>
+  ) : (
+<div className='container'>
+<div className='inner-container'>
+<Header/>
+<Select
+ quote={quote}
+ setQuote={setQuote}
+ />
+</div>
+<div className='inner-container'>
+<RadioOptions
+doYouLikeLoganRoy={doYouLikeLoganRoy}
+setDoYouLikeLoganRoy ={setDoYouLikeLoganRoy}
+/>
+</div>
+<div className='inner-container'>
+<Name
+name={name}
+setName={setName}
+/>
+</div>
+<div className='inner-container'>
+<SubmitButton
+submit={submit}
+setSubmit={setSubmit}
+/>
 
+</div>
+</div>
+    )}
 
-
-
-
-//import React, from 'react';
-
-//export const App = () => {
-  //const [nameInput, setNameInput ] = useState('');
-  //const [surnameInput, setSurnameInput] = useState(''); 
-  //const [step, setStep]= useState(1);
-
-
-  //const onNameInputChange =(event) =>{
-    //setNameInput (event.target.value)
-  //} ;
-//const onSurnameInputChange =(event) =>{
-   // setSurnameInput (event.target.value)
-  //} ;
-
-//if(step === 1) {
-  //return(
-    //<div>
-    //<form>
-   //<label htmlFor="nameInput" >Please type your firstname:</label>
-     //<input 
-     //id="nameInput"
-    //type="text"
-    //value={nameInput} 
-    //onChange= {onNameInputChange} />
-    //</form>
-  //<button onClick={()=> setStep(step +1)}> Next question</button>
-    //</div>
-
-  //);
-//} else if(step===2) {
-  //return (
-    //<div>
-  //<form>
-   //   <label htmlFor="surnameInput" >Please type your  surname:</label>
-   // <input 
-     //   id="surnameInput"
-       // type="text"
-        //value={surnameInput} 
-        //onChange= {onSurnameInputChange} />
-  //</form>
-    //<button onClick={() => setStep (step+1)}>Your overview </button>
-    //</div>
-  //);
-//} else if (step ===3) { 
-  //return (
-    //<section>
-   // <h2>My vaues from form:</h2>
-   // <p>Name: {nameInput}</p>
-   //<p>Surname: {surnameInput}</p>
-//</section>  
- // );
-//}
+</div>
+    )
+}
