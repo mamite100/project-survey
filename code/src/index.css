@@ -1,10 +1,14 @@
 body {
   margin: 0;
-  font-family: 'optistaines-extended-light', sans-serif;
+  ffont-family: 'optistaines-extended-light', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
   background-image: url("./assets/Sucession_img.jpg");
 }
+code {
+  font-family: 'optistaines-extended-light', sans-serif;
+}
+
 
 html{
   background-repeat: no-repeat;
