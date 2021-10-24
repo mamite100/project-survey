@@ -6,28 +6,31 @@ const ThirdQuestion = ({
 }) => {
     return (
         <form>
-            <label>
-                <input 
-                    type="radio" 
-                    value = "happy"
-                    onChange = {() => onHappinessChange('happy')}
-                    checked = {happiness === 'happy'}
+        <h2>Do you like Logan Roy, the founder of Waystar Royco?</h2>
+              <label>
+                    <input 
+                            type="radio" 
+                            value = "happy"
+                            onChange = {() => onHappinessChange('happy')}
+                            checked = {happiness === 'happy'}
                />
+                 
                  <span role="img" aria-label= "Crown">Oh YES! 👑
                 </span>
         </label>
 
        <label>
-                <input 
-                type="radio" 
-                value = "sad"
-                onChange = {() => onHappinessChange('sad')}
-                checked = {happiness === 'sad'}
+                 <input 
+                        className="radio-button"
+                        type="radio" 
+                        value = "sad"
+                        onChange = {() => onHappinessChange('sad')}
+                        checked = {happiness === 'sad'}
                />        
-                <span role="img" aria-label= "Sad face"> Well I guess Yess .. 🥺
+                <span role="img" aria-label= "Sad face"> Well I guess Yes .. 🥺
                 </span>
         </label>
-        <button onClick ={onStepChange}>See Summary </button>
+        <button className="button" type= "submit" onClick ={onStepChange}>Next question</button>
     </form>
     );
 };

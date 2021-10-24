@@ -1,15 +1,20 @@
 //In the Form component we have the state variables and functions to deal with changes in the form. Conditional rendering
 
 import React, { useState } from 'react';
+
+
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import Overview from './Overview';
 import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
+ 
 
 const Form = () => {
     const [nameInput, setNameInput] = useState('');
     const [surnameInput, setSurnameInput] = useState('');
     const [happiness, setHappiness]= useState('happy');
+    const [flavour, setFlavour]= useState('greg');
     const [step, setStep] = useState(1);
 
 
@@ -24,6 +29,10 @@ const Form = () => {
     const onHappinessChange =(feeling) => {
         setHappiness(feeling)
     }
+    const onFlavourChange = (flavour) => {
+		setFlavour(flavour)
+	}
+
     const onStepChange = () => {
         setStep(step + 1);
     };
@@ -54,10 +63,22 @@ const Form = () => {
             )}
 
             {step === 4 && (
-                        <Overview nameInput={nameInput} surnameInput={surnameInput} />
-            )}
+				<FourthQuestion
+				flavour={flavour}
+				onFlavourChange={onFlavourChange}
+				onStepChange={onStepChange}
+				/>
+			)}  
+
+            {step === 5 && (
+				<Overview 
+                nameInput={nameInput}
+                surnameInput={surnameInput} 
+                happiness={happiness}
+                flavour={flavour} />
+			)}
         </div>
     );
     
 };
-export default ThirdQuestion;
+export default Form; 
