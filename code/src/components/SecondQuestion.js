@@ -13,7 +13,7 @@ const SecondQuestion = ({
                 value={surnameInput}
                 onChange={onSurnameInputChange}
             />
-            <button onClick={onStepChange}>See overview</button>
+            <button onClick={onStepChange}>Next question</button>
         </form>
     );
 };
