@@ -7,7 +7,8 @@ const FourthQuestion = ({
     return (
         <form>
             <label htmlFor="flavour ">
-                Pick your fav qoute
+                <h2>“Succession” is a gold mine of cutting quotes and humiliating insults. Choose your favorite:</h2>
+                    <p>There weren't that many that did not include bad language...</p>
                 <select value={flavour} onChange ={event => onFlavourChange(event.target.value)}>
                     <option value="greg">Wherever you hide, the party finds you.( Greg Hirsch)</option>
                     <option value="shiv">If he can’t ride two horses at once, he shouldn’t be working at the circus. (Siobhan 'Shiv' Roy)</option>

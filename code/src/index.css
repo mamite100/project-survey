@@ -33,10 +33,10 @@ font-style: italic;
 
 }
 
-/*p{
+ .summary-p {
   font-family: 'optistaines-extended-light', sans-serif;
-  font-size: 150px;
-}*/
+  font-size: 25px;
+}
 
 .wrapper {
   display: flex;
@@ -76,6 +76,9 @@ font-style: italic;
   font-family: 'optistaines-extended-light', sans-serif;
   cursor: pointer;
   background-color: rgba(63, 56, 43, 0.329); 
+  width: 10%;
+  display: flex;
+  flex-direction: column;
 }
 button:hover {
   box-shadow: rgba(19, 17, 13, 0.329) 0 4px 8px; 
@@ -90,6 +93,16 @@ button:hover {
   margin: 8px 0;
   border: 1px solid rgb(141, 32, 32);
   border-radius: 9px;
+}
+.overview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(172, 168, 162, 0.411);
+  border-radius: 9px;
+  border: 1px solid rgb(141, 32, 32);
+  padding: 10px;
+  margin: 8px 0;
 }
 
 /*Media quaries */
