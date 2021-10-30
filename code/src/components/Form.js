@@ -1,4 +1,4 @@
-//In the Form component we have the state variables and functions to deal with changes in the form. Conditional rendering
+
 
 import React, { useState } from 'react';
 
@@ -14,9 +14,8 @@ const Form = () => {
     const [nameInput, setNameInput] = useState('');
     const [surnameInput, setSurnameInput] = useState('');
     const [happiness, setHappiness]= useState('happy');
-    const [flavour, setFlavour]= useState('greg');
+    const [flavour, setFlavour]= useState('flavour');
     const [step, setStep] = useState(1);
-
 
 
     const onNameInputChange = (event) => {
