@@ -15,8 +15,7 @@ const ThirdQuestion = ({
                             checked = {happiness === 'happy'}
                />
                  
-                 <span role="img" aria-label= "Crown">Oh YES! 👑
-                </span>
+                 <span>Oh YES!                 </span>
         </label>
 
        <label>
@@ -27,7 +26,7 @@ const ThirdQuestion = ({
                         onChange = {() => onHappinessChange('sad')}
                         checked = {happiness === 'sad'}
                />        
-                <span role="img" aria-label= "Sad face"> Well I guess Yes .. 🥺
+                <span> Well I guess Yes ..
                 </span>
         </label>
         <button className="button" type= "submit" onClick ={onStepChange}>Next question</button>

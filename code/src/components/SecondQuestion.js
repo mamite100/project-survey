@@ -7,7 +7,7 @@ const SecondQuestion = ({
 }) => {
     return (
         <form className ="inner-container">
-              <label  class="label-text" htmlFor="surnameInput">Please type your surname</label>
+              <label  className="label-text" htmlFor="surnameInput">Please type your surname</label>
             <input
                 className="input-text"
                 id="surnameInput"
