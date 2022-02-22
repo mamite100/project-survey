@@ -10,6 +10,6 @@ The biggest problem this week was to understad the logic between the components.
 
 ## View it live
 
-please view at: 
+please view at: https://succession.netlify.app/
 
 
